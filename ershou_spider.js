@@ -48,7 +48,7 @@ function getData(url) {
             if (!err) console.log('success~');
           }
         );
-        let stamp = new Date().getFullYear() + new Date().getMonth() + new Date().getDay();
+        let stamp = new Date().getFullYear().toString() + (new Date().getMonth()+1).toString() + new Date().getDate().toString();
         writeData(result, `beikewx2000full-${stamp}.xlsx`); // 写入文件
       }
     });
